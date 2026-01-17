@@ -48,24 +48,21 @@ Let's make your computer feel like a real web server. Instead of typing localhos
 🐋 Phase 4: Docker & Host File Mapping
 Now we tell Docker to run our AI. We will use a Volume to link your Windows folder (the "Host") to the Docker container.
 
-In your Powershell terminal, run these two commands:
+In your wsl terminal, run these two commands:
 ```bash
 # 1. Build the AI 'Image' (This downloads the AI models)
 docker build -t alpr-engine .
 
 # 2. Run the 'Container' with Host Mapping
-docker run -d -p 8000:8000 -v $(pwd):/app alpr-engine
+docker run -d -p 8000:80 -v $(pwd):/app alpr-engine
 ```
 ### 📮 Phase 5: Testing with Postman
 1. Time to see if the AI can actually read!
 2. Open Postman and click New > HTTP Request.
-3. Set the method to POST.
-
-below needs UPDATING
-5. Use your "Hacker URL": http://my-alpr.local:8000/predict.
-6. Go to the Body tab and select form-data.
-7. Under Key, type file and change the dropdown to File.
-8. Under Value, click "Select Files" and upload a picture of a car license plate.
+3. Set the method to get.
+4. Get the swaggerjson http://my-alpr.local:8000/docs
+5. Take the collection from here and import it into postman.
+6. To post you're own images encode an image to base64 then send it like the sample in the postman.
 
 Click Send!
 ### 🧠 Summary: How it all fits together
