@@ -48,7 +48,7 @@ Let's make your computer feel like a real web server. Instead of typing localhos
 🐋 Phase 4: Docker & Host File Mapping
 Now we tell Docker to run our AI. We will use a Volume to link your Windows folder (the "Host") to the Docker container.
 
-In your WSL terminal, run these two commands:
+In your Powershell terminal, run these two commands:
 ```bash
 # 1. Build the AI 'Image' (This downloads the AI models)
 docker build -t alpr-engine .
