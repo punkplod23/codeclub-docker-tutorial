@@ -28,7 +28,7 @@ We aren't just downloading a ZIP file; we are "cloning" it into our Linux enviro
 mkdir -p ~/projects && cd ~/projects
 
 # Clone the AI project from GitHub
-git clone [https://github.com/punkplod23/fast-alpr-api.git](https://github.com/punkplod23/fast-alpr-api.git)
+git clone https://github.com/punkplod23/fast-alpr-api.git
 
 # Enter the folder and open it in VS Code
 cd fast-alpr-api
